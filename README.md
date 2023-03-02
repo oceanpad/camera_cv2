@@ -1,3 +1,8 @@
+## YoloV5s with OpenCV2
+realtime object detection from webcam
+
+![sample](sample.png)
+
 ## Pre Requirments
 
 conda create --name camera_cv python=3.8
