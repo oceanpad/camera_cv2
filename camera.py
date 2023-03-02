@@ -2,8 +2,7 @@ import cv2
 
 stream = cv2.VideoCapture(0)
 
-while True: 
-    
+while True:
     ret, frame = stream.read()
     image = cv2.flip(frame, 0)
     cv2.imshow('Video Stream Monitor', frame)
