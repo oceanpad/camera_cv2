@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    image: camera_yolov5:latest
+    resatrt: always
+    container_name: yolov5
+    privileged: true
+    volumes:
+      - ../:/app/
+    devices:
+      - /dev:/dev
+    networks:
+      - webnet
+    command: python bird_repellen_docker.py
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+networks:
+  webnet:
