@@ -11,10 +11,9 @@ while True:
     ret, frame = stream.read()
     results = model([frame])
     labels = results.pandas().xyxy[0]['name'].tolist()
-    logging.info(labels)
     if 'bird' in labels:
       results.save()
-      print(labels)
+      logging.info(labels)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     time.sleep(0.5)
