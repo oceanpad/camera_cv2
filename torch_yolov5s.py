@@ -1,8 +1,11 @@
 import cv2, torch, time
 import numpy as np
+from playsound import playsound
+
+playsound('voices/dog-barking.wav')
 
 # Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5x', pretrained=True)
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 
 stream = cv2.VideoCapture(0)
 while True:
